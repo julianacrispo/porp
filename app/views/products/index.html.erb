@@ -1,0 +1,15 @@
+
+<div class = "container">
+  <h1> Product Index Page</h1>
+
+  <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+  <% @products.each do |product| %>
+    <p><%= link_to product.name, product %> 
+     <span class="badge"> <%= product.uses.count%> </span></p>
+  <% end %>
+
+</div>

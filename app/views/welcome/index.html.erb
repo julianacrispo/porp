@@ -2,5 +2,11 @@
   <div class="container" style= "text-align:center; display: inline-block; white-space: nowrap;">
      <h1> <span class="glyphicon glyphicon-share-alt"></span> PASS </h1> <h3> or </h3>
      <h1><span class="glyphicon glyphicon-usd"></span> PURCHASE </h1>
+
+      <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+       <%= submit_tag "Search", :name => nil %>
+    <% end %>
+
   </div>
 </div>
