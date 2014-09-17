@@ -8,8 +8,14 @@
   <% end %>
 
   <% @products.each do |product| %>
-    <p><%= link_to product.name, product %> 
-     <span class="badge"> <%= product.uses.count%> </span></p>
+     <div class="media">
+      <div class="media-body">
+       <h4 class="media-heading">
+        <%= link_to product.name, product %> 
+     <span class="badge"> <%= product.uses.count%> </span>
+        </h4>
+     </div>
+   </div>
   <% end %>
 
 </div>
