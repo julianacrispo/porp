@@ -1,4 +1,9 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
-<%= @product.name %>
-<%= @product.uses  %>
+<div class = "container">
+
+  <h1>Products#show</h1>
+  <p>Find me in app/views/products/show.html.erb</p>
+  <h1> <%= @product.name %></h1>
+
+  <%= link_to "Edit", edit_product_path(@product), class: 'btn btn-success' %>
+  <%= @product.uses  %>
+</div>
