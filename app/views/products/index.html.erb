@@ -7,6 +7,8 @@
     <%= submit_tag "Search", :name => nil %>
   <% end %>
 
+  <%= link_to "Add a New Product", new_product_path, class: 'btn btn-success' %>
+
   <% @products.each do |product| %>
      <div class="media">
       <div class="media-body">
