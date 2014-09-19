@@ -7,9 +7,14 @@
   <%= link_to "Edit Product Name", edit_product_path(@product), class: 'btn btn-success' %>
   
 
-<% @uses.each do |use| %>
-<p><%= use.description %> submitted <%= time_ago_in_words(use.created_at) %> ago by <%= use.user.name %> </p>
-<% end %>
+<h2> Use cases </h2>
+<div class= 'js-uses'>
+<%= render partial: 'uses/use', collection: @uses %>
+</div>
+<%= render 'uses/form' %>
+
+
+
 
 
 </div>
