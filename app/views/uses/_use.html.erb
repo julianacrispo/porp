@@ -1,5 +1,6 @@
+<%= content_tag :div, class: 'media', id: "use-#{use.id}" do %>
 
+  <%= use.user.name %> and X others use for <%= use.description %>
 
-<% @uses.each do |use| %>
-<p><%= use.user.name %> and X others use <%= @product.name %> for <%= use.description %>
 <% end %>
+

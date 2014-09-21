@@ -1,0 +1,6 @@
+
+  $('.js-uses').prepend("<%= escape_javascript(render(@use)) %>");
+  $('.new_use').replaceWith("<%= escape_javascript(render partial: 'uses/form', locals: { product: @product, use: @new_use }) %>");
+  $('.js-uses-count').html("<%= @product.uses.count %> Uses");
+<% else %>
+  $('.new_use').replaceWith("<%= escape_javascript(render partial: 'uses/form', locals: { product: @product, use: @use }) %>");

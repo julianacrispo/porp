@@ -7,14 +7,11 @@
   <%= link_to "Edit Product Name", edit_product_path(@product), class: 'btn btn-success' %>
   
 
-<h2> Use cases </h2>
-<div class= 'js-uses'>
-<%= render partial: 'uses/use', collection: @uses %>
-</div>
-<%= render 'uses/form' %>
+ <div class="js-uses">  
+      <%= render partial: 'uses/use', collection: @uses, locals: {  product: @product } %>
+  </div>
+
+  <%= render partial: 'uses/form', locals: { product: @product, use: @use } %>
 
 
-
-
-
-</div>
+</div> <!-- container end  -->

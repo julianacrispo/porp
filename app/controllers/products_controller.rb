@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class ProductsController < ApplicationController #Todo: add authorizations
   
   def index
     @products = Product.all.order("created_at DESC") #todo: sort products by activity in descending order
@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @uses = @product.uses
+    @use = Use.new
   end
 
   def new
@@ -46,5 +47,22 @@ class ProductsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy 
+    @product = Product.find(params[:id])
+    @uses = @product.uses
+    @use = Use.new
+
+    name = @product.name
+
+    if @product.destroy
+      flash[:notice] = "\"#{name}\" was deleted successfully."
+      redirect_to products_path
+    else
+      flash[:error] = "There was an error deleting the product"
+      render :show
+    end
+  end
+
 
 end
