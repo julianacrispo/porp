@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20140919143452) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "logo"
   end
 
   create_table "users", force: true do |t|
