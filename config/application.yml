@@ -6,13 +6,6 @@
 # STRIPE_API_KEY: EdAvEPVEC3LuaTg5Q3z6WbDVqZlcBQ8Z
 # STRIPE_PUBLIC_KEY: pk_BRgD57O8fHja9HxduJUszhef6jCyS
 
-SENDGRID_USERNAME: app29689290@heroku.com
+SENDGRID_USERNAME: app29689290@heroku.com  #getting new creds
 SENDGRID_PASSWORD: mzmcramr
 
-AWS_ACCESS_KEY_ID: AKIAJFNJLPMVSDAPQD6Q
-AWS_SECRET_ACCESS_KEY: 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 
-
-development: 
-  AWS_BUCKET: porp-development
-production:
-  AWS_BUCKET: porp-production
