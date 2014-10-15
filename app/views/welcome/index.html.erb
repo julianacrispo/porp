@@ -1,18 +1,20 @@
- <div class="jumbotron">
+<div class = "main-wrapper">
+   <div class="jumbotron">
 
-    <div class="container" style= "text-align:center; display: inline-block; white-space: nowrap;">
-    
-      <a class="pass-button" href="#">PASS</a> 
-      OR 
-      <a class="purchase-button" href="#">PURCHASE</a> 
-     
+      <div class="container" style= "text-align:center; display: inline-block; white-space: nowrap; min-height: 450px;">
+      
+        <a class="pass-button" href="#">PASS</a> 
+        OR 
+        <a class="purchase-button" href="#">PURCHASE</a> 
+       
 
-      <%= form_tag(products_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
-       <%= submit_tag "Search", :name => nil %>
-    <% end %>
+        <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+         <%= submit_tag "Search", :name => nil %>
+      <% end %>
 
- 
+   
 
+    </div>
   </div>
 </div>
